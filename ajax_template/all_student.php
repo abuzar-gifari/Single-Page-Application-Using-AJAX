@@ -1,7 +1,5 @@
 <?php
 
-
-
 $connection = new mysqli('localhost', 'root', '', 'ajax129');
 $data = $connection->query("SELECT * FROM students");
 
@@ -22,7 +20,6 @@ while ($stu = $data->fetch_object()) :
       <a delete_id="<?php echo  $stu->id ?>" class="btn btn-sm btn-danger delete-btn" href="#">Delete</a>
     </td>
   </tr>
-
 
 <?php
 

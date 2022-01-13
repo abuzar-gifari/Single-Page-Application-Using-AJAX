@@ -30,7 +30,7 @@
 
 
 	</div>
-
+ 
 
 
 
@@ -44,12 +44,11 @@
 		$('#add_sudent').click(function() {
 
 			$.ajax({
-				url: 'create.php',
-				success: function(data) {
+				url:'create.php',
+				success: function(data){
 					$('.app').html(data);
 				}
 			});
-
 
 			return false;
 		});
@@ -58,8 +57,8 @@
 
 			$.ajax({
 				url: 'profile.php',
-				success: function(tabira) {
-					$('.app').html(tabira);
+				success: function(data) {
+					$('.app').html(data);
 				}
 			});
 
@@ -72,8 +71,8 @@
 
 			$.ajax({
 				url: 'all.php',
-				success: function(fara) {
-					$('.app').html(fara);
+				success: function(data) {
+					$('.app').html(data);
 					allData();
 				}
 			});
@@ -84,12 +83,12 @@
 
 		$.ajax({
 			url: 'all.php',
-			success: function(fara) {
-				$('.app').html(fara);
+			success: function(data) {
+				$('.app').html(data);
 			}
 		});
 
-
+	// 	when page load this all.php file will automatically execute.
 
 		$(document).on('submit', '#student_form', function() {
 
